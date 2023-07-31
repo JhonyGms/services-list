@@ -8,6 +8,6 @@ export class Tasks {
   @Field()
   title: string;
 
-  @Field()
-  content: string;
+  @Field({ nullable: true })
+  content?: string;
 }
