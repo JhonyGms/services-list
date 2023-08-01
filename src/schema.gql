@@ -11,3 +11,12 @@ type Tasks {
 type Query {
   tasks: [Tasks!]!
 }
+
+type Mutation {
+  createtasks(tastInputs: CreateTasksInput!): Tasks!
+}
+
+input CreateTasksInput {
+  title: String!
+  content: String!
+}
