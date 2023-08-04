@@ -14,6 +14,14 @@ export class TasksService {
     return this.tasksRepository.find();
   }
 
+  findTaskById(id: number): Promise<Tasks> {
+    return this.tasksRepository.findOne({
+      where: {
+        id,
+      },
+    });
+  }
+
   createTask(tasks: CreateTasksInput): Promise<Tasks> {
     const newtasks = this.tasksRepository.create(tasks);
     return this.tasksRepository.save(newtasks);
