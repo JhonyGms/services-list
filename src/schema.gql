@@ -10,6 +10,7 @@ type Tasks {
 
 type Query {
   tasks: [Tasks!]!
+  task(id: Int!): Tasks!
 }
 
 type Mutation {
@@ -18,5 +19,5 @@ type Mutation {
 
 input CreateTasksInput {
   title: String!
-  content: String!
+  content: String
 }
